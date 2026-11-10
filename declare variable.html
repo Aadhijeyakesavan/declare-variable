@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Variables</title>
+</head>
+<body>
+
+    <h2>1. Declare Variables</h2>
+
+    <script>
+        let name = "Arun";
+        let age = 20;
+        let city = "Madurai";
+
+        document.write(name + " " + age + " " + city);
+    </script>
+
+
+    <h2>2. Add Two Numbers</h2>
+
+    <script>
+        let a = 10;
+        let b = 5;
+
+        let sum = a + b;
+
+        document.write("Sum = " + sum);
+    </script>
+
+
+    <h2>3. Variable Scope Challenge</h2>
+
+    <script>
+        var x = 10;
+        let y = 20;
+        const z = 30;
+
+        function myFunction() {
+            var a = 100;
+            let b = 200;
+            const c = 300;
+
+            document.write("<br>Function var = " + a);
+            document.write("<br>Function let = " + b);
+            document.write("<br>Function const = " + c);
+        }
+
+        myFunction();
+
+        if (true) {
+            var p = 40;
+            let q = 50;
+            const r = 60;
+
+            document.write("<br>Block var = " + p);
+            document.write("<br>Block let = " + q);
+            document.write("<br>Block const = " + r);
+        }
+
+        document.write("<br>Outside var = " + p);
+
+        document.write("<br>Outside let = " + y);
+        document.write("<br>Outside const = " + z);
+
+        // q and r are not accessible outside the block
+        // a, b and c are not accessible outside the function
+
+    </script>
+
+</body>
+</html>
